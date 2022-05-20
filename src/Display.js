@@ -8,13 +8,13 @@ import dd from './profile_3.jpg'
 const Display = () => {
 
     let [data, setData] = useState( [
-        { id: 1, title: 'Blessing Tech', body: 'we build web apps', author: 'Blessing', img: cc},
+        { id: 1, title: 'Blessing Tech', body: 'We build web apps', author: 'Blessing', img: cc},
            
-        {id: 2, title: 'Silvanus Tech', body: 'we product designs', author: 'Silva', img: dd},
+        {id: 2, title: 'Silvanus Tech', body: 'Web/Product designs', author: 'Silva', img: dd},
     
-        {id: 3, title: 'Rilwans consult', body: 'we carry out therapeutic consultations', author: 'Rilwan', img: cc},
+        {id: 3, title: 'Rilwans consult', body: 'We carry out therapeutic consultations', author: 'Rilwan', img: cc},
     
-        {id: 4, title: 'B-lard computers', body: 'we procure hardwares and software apps', author: 'B-lard', img: dd}
+        {id: 4, title: 'B-lard computers', body: 'We procure hardwares and software apps', author: 'B-lard', img: dd}
     ])
 function removeItem(id){
     let remove = data.filter((detail)=> detail.id !== id)
@@ -30,9 +30,9 @@ function removeItem(id){
             const {title,body,author,id,img} = datum
             return(
                 <div className="move" key={id}>
-                    <h2>{title}</h2>
-                    <h2>{body}</h2>
-                    <h2>{author}</h2>
+                    <h2>Company: {title}</h2>
+                    <h2>Services: {body}</h2>
+                    <h2>Author: {author}</h2>
                     <button className='clickBtn' onClick={()=> removeItem(datum.id)}>click me</button>
                     <div className="">
                         <img src={img} alt="" srcset="" />
